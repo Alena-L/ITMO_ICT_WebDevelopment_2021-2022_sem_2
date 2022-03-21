@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>api/airplanes - Airport</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "AIRPLANE endpoints", url: "#_top", children: [
+              {title: "List of airplanes", url: "#list-of-airplanes" },
+              {title: "Add a new airplane", url: "#add-a-new-airplane" },
+              {title: "Modify (get/update/delete) an existing airplane", url: "#modify-getupdatedelete-an-existing-airplane" },
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../schedule/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../schedule/" class="btn btn-xs btn-link">
+        api/schedule
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../../user/employee/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../user/employee/" class="btn btn-xs btn-link">
+        list of employees
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h2 id="airplane-endpoints">AIRPLANE endpoints</h2>
+<h3 id="list-of-airplanes">List of airplanes</h3>
+<p><strong>URL</strong> : <code>airplanes/</code></p>
+<p><strong>Method</strong> : <code>GET</code></p>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<p><strong>Content</strong> : <code>{[]}</code></p>
+<pre><code class="language-json">    {
+        &quot;id&quot;: 1,
+        &quot;tail_number&quot;: &quot;RP-C3224&quot;,
+        &quot;type&quot;: &quot;Airbus&quot;,
+        &quot;seats&quot;: 150,
+        &quot;velocity&quot;: 840,
+        &quot;airline&quot;: &quot;S7 Airlines&quot;,
+        &quot;under_maintenance&quot;: false
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;tail_number&quot;: &quot;VQ-BOZ&quot;,
+        &quot;type&quot;: &quot;Airbus&quot;,
+        &quot;seats&quot;: 150,
+        &quot;velocity&quot;: 840,
+        &quot;airline&quot;: &quot;Nordwind Airlines&quot;,
+        &quot;under_maintenance&quot;: false
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;tail_number&quot;: &quot;N468AC&quot;,
+        &quot;type&quot;: &quot;Boeing&quot;,
+        &quot;seats&quot;: 168,
+        &quot;velocity&quot;: 807,
+        &quot;airline&quot;: &quot;Nordwind Airlines&quot;,
+        &quot;under_maintenance&quot;: false
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;tail_number&quot;: &quot;N737RD&quot;,
+        &quot;type&quot;: &quot;Boeing&quot;,
+        &quot;seats&quot;: 168,
+        &quot;velocity&quot;: 807,
+        &quot;airline&quot;: &quot;S7 Airlines&quot;,
+        &quot;under_maintenance&quot;: true
+    }
+</code></pre>
+<h3 id="add-a-new-airplane">Add a new airplane</h3>
+<p><strong>URL</strong> : <code>airplanes/create/</code></p>
+<p><strong>Method</strong> : <code>POST</code></p>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<p><strong>Content</strong> : <code>{[]}</code></p>
+<pre><code class="language-json">{
+    &quot;tail_number&quot;: &quot;&quot;,
+    &quot;type&quot;: &quot;&quot;,
+    &quot;seats&quot;: null,
+    &quot;velocity&quot;: null,
+    &quot;airline&quot;: &quot;&quot;,
+    &quot;under_maintenance&quot;: false
+}
+</code></pre>
+<h3 id="modify-getupdatedelete-an-existing-airplane">Modify (get/update/delete) an existing airplane</h3>
+<p><strong>URL</strong> : <code>airplanes/&lt;int:pk&gt;/</code></p>
+<p><strong>Method</strong> : <code>GET</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></p>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<p><strong>Content</strong> : <code>{[]}</code></p>
+<pre><code class="language-json">{
+    &quot;id&quot;: 1,
+    &quot;tail_number&quot;: &quot;RP-C3224&quot;,
+    &quot;type&quot;: &quot;Airbus&quot;,
+    &quot;seats&quot;: 150,
+    &quot;velocity&quot;: 840,
+    &quot;airline&quot;: &quot;S7 Airlines&quot;,
+    &quot;under_maintenance&quot;: false
+}
+</code></pre>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../schedule/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../schedule/" class="btn btn-xs btn-link">
+        api/schedule
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../../user/employee/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../user/employee/" class="btn btn-xs btn-link">
+        list of employees
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

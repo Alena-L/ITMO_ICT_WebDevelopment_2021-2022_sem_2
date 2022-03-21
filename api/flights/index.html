@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>api/flights - Airport</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "FLIGHTS endpoints", url: "#_top", children: [
+              {title: "List of flights", url: "#list-of-flights" },
+              {title: "Add a new flight", url: "#add-a-new-flight" },
+              {title: "Modify (get/update/delete) an existing flight", url: "#modify-getupdatedelete-an-existing-flight" },
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../airline_admin/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../airline_admin/" class="btn btn-xs btn-link">
+        api/airline_admin
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../schedule/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../schedule/" class="btn btn-xs btn-link">
+        api/schedule
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h2 id="flights-endpoints">FLIGHTS endpoints</h2>
+<h3 id="list-of-flights">List of flights</h3>
+<p><strong>URL</strong> : <code>flights/</code></p>
+<p><strong>Method</strong> : <code>GET</code></p>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<p><strong>Content</strong> : <code>{[]}</code></p>
+<pre><code class="language-json">     {
+        &quot;id&quot;: 1,
+        &quot;crew&quot;: 1,
+        &quot;tickets_sold&quot;: 124,
+        &quot;departure_date&quot;: &quot;2021-12-02&quot;,
+        &quot;departure_time&quot;: &quot;20:23:00&quot;,
+        &quot;arrival_date&quot;: &quot;2021-12-02&quot;,
+        &quot;arrival_time&quot;: &quot;22:01:00&quot;,
+        &quot;transit_arrival_date&quot;: null,
+        &quot;transit_arrival_time&quot;: null,
+        &quot;transit_departure_date&quot;: null,
+        &quot;transit_departure_time&quot;: null,
+        &quot;number&quot;: 1010,
+        &quot;plane_id&quot;: 1
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;crew&quot;: 2,
+        &quot;tickets_sold&quot;: 98,
+        &quot;departure_date&quot;: &quot;2021-11-29&quot;,
+        &quot;departure_time&quot;: &quot;11:20:00&quot;,
+        &quot;arrival_date&quot;: &quot;2021-11-29&quot;,
+        &quot;arrival_time&quot;: &quot;12:30:00&quot;,
+        &quot;transit_arrival_date&quot;: null,
+        &quot;transit_arrival_time&quot;: null,
+        &quot;transit_departure_date&quot;: null,
+        &quot;transit_departure_time&quot;: null,
+        &quot;number&quot;: 5103,
+        &quot;plane_id&quot;: 2
+    }
+    {
+        &quot;id&quot;: 3,
+        &quot;crew&quot;: 1,
+        &quot;tickets_sold&quot;: 162,
+        &quot;departure_date&quot;: &quot;2021-11-30&quot;,
+        &quot;departure_time&quot;: &quot;19:45:00&quot;,
+        &quot;arrival_date&quot;: &quot;2021-12-01&quot;,
+        &quot;arrival_time&quot;: &quot;07:15:00&quot;,
+        &quot;transit_arrival_date&quot;: &quot;2021-11-30&quot;,
+        &quot;transit_arrival_time&quot;: &quot;21:20:00&quot;,
+        &quot;transit_departure_date&quot;: &quot;2021-11-30&quot;,
+        &quot;transit_departure_time&quot;: &quot;22:55:00&quot;,
+        &quot;number&quot;: 6023,
+        &quot;plane_id&quot;: 3
+    }
+</code></pre>
+<h3 id="add-a-new-flight">Add a new flight</h3>
+<p><strong>URL</strong> : <code>flights/create/</code></p>
+<p><strong>Method</strong> : <code>POST</code></p>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<p><strong>Content</strong> : <code>{[]}</code></p>
+<pre><code class="language-json">{
+    &quot;crew&quot;: null,
+    &quot;tickets_sold&quot;: null,
+    &quot;departure_date&quot;: null,
+    &quot;departure_time&quot;: null,
+    &quot;arrival_date&quot;: null,
+    &quot;arrival_time&quot;: null,
+    &quot;transit_arrival_date&quot;: null,
+    &quot;transit_arrival_time&quot;: null,
+    &quot;transit_departure_date&quot;: null,
+    &quot;transit_departure_time&quot;: null,
+    &quot;number&quot;: null,
+    &quot;plane_id&quot;: null
+}
+</code></pre>
+<h3 id="modify-getupdatedelete-an-existing-flight">Modify (get/update/delete) an existing flight</h3>
+<p><strong>URL</strong> : <code>flights/&lt;int:pk&gt;/</code></p>
+<p><strong>Method</strong> : <code>GET</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></p>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<p><strong>Content</strong> : <code>{[]}</code></p>
+<pre><code class="language-json">{
+    &quot;id&quot;: 1,
+    &quot;crew&quot;: 1,
+    &quot;tickets_sold&quot;: 124,
+    &quot;departure_date&quot;: &quot;2021-12-02&quot;,
+    &quot;departure_time&quot;: &quot;20:23:00&quot;,
+    &quot;arrival_date&quot;: &quot;2021-12-02&quot;,
+    &quot;arrival_time&quot;: &quot;22:01:00&quot;,
+    &quot;transit_arrival_date&quot;: null,
+    &quot;transit_arrival_time&quot;: null,
+    &quot;transit_departure_date&quot;: null,
+    &quot;transit_departure_time&quot;: null,
+    &quot;number&quot;: 1010,
+    &quot;plane_id&quot;: 1
+}
+</code></pre>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../airline_admin/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../airline_admin/" class="btn btn-xs btn-link">
+        api/airline_admin
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../schedule/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../schedule/" class="btn btn-xs btn-link">
+        api/schedule
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
