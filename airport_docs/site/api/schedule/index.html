@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>api/schedule - Airport</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "SCHEDULE endpoints", url: "#_top", children: [
+              {title: "List of scheduled flights", url: "#list-of-scheduled-flights" },
+              {title: "Add a new scheduled flight", url: "#add-a-new-scheduled-flight" },
+              {title: "Modify (get/update/delete) an existing scheduled flight", url: "#modify-getupdatedelete-an-existing-scheduled-flight" },
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../flights/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../flights/" class="btn btn-xs btn-link">
+        api/flights
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../airplanes/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../airplanes/" class="btn btn-xs btn-link">
+        api/airplanes
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h2 id="schedule-endpoints">SCHEDULE endpoints</h2>
+<h3 id="list-of-scheduled-flights">List of scheduled flights</h3>
+<p><strong>URL</strong> : <code>schedule/</code></p>
+<p><strong>Method</strong> : <code>GET</code></p>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<p><strong>Content</strong> : <code>{[]}</code></p>
+<pre><code class="language-json">     {
+        &quot;number&quot;: 1010,
+        &quot;distance&quot;: 635,
+        &quot;departure&quot;: &quot;Санкт-Петербург&quot;,
+        &quot;arrival&quot;: &quot;Москва&quot;,
+        &quot;completed&quot;: 33,
+        &quot;transit&quot;: null
+    },
+    {
+        &quot;number&quot;: 5103,
+        &quot;distance&quot;: 3313,
+        &quot;departure&quot;: &quot;Новосибирск&quot;,
+        &quot;arrival&quot;: &quot;Сочи&quot;,
+        &quot;completed&quot;: 17,
+        &quot;transit&quot;: null
+    },
+    {
+        &quot;number&quot;: 6023,
+        &quot;distance&quot;: 3618,
+        &quot;departure&quot;: &quot;Санкт-Петербург&quot;,
+        &quot;arrival&quot;: &quot;Кемерово&quot;,
+        &quot;completed&quot;: 4,
+        &quot;transit&quot;: 2
+    }
+</code></pre>
+<h3 id="add-a-new-scheduled-flight">Add a new scheduled flight</h3>
+<p><strong>URL</strong> : <code>schedule/create/</code></p>
+<p><strong>Method</strong> : <code>POST</code></p>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<p><strong>Content</strong> : <code>{[]}</code></p>
+<pre><code class="language-json">{
+    &quot;number&quot;: null,
+    &quot;distance&quot;: null,
+    &quot;departure&quot;: &quot;&quot;,
+    &quot;arrival&quot;: &quot;&quot;,
+    &quot;completed&quot;: null,
+    &quot;transit&quot;: null
+}
+</code></pre>
+<h3 id="modify-getupdatedelete-an-existing-scheduled-flight">Modify (get/update/delete) an existing scheduled flight</h3>
+<p><strong>URL</strong> : <code>schedule/&lt;int:pk&gt;/</code></p>
+<p><strong>Method</strong> : <code>GET</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></p>
+<p><strong>Code</strong> : <code>200 OK</code></p>
+<p><strong>Content</strong> : <code>{[]}</code></p>
+<pre><code class="language-json">{
+        &quot;number&quot;: 5103,
+        &quot;distance&quot;: 3313,
+        &quot;departure&quot;: &quot;Новосибирск&quot;,
+        &quot;arrival&quot;: &quot;Сочи&quot;,
+        &quot;completed&quot;: 17,
+        &quot;transit&quot;: null
+    }
+</code></pre>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../flights/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../flights/" class="btn btn-xs btn-link">
+        api/flights
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../airplanes/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../airplanes/" class="btn btn-xs btn-link">
+        api/airplanes
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
