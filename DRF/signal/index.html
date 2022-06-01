@@ -11,7 +11,7 @@
     
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>2.1.2 Автоматические фильтры - Airport</title>
+    <title>2.4 Сигналы - Airport</title>
     <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
@@ -32,7 +32,7 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "2.1.2 \u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0444\u0438\u043b\u044c\u0442\u0440\u044b", url: "#_top", children: [
+          {title: "2.4. \u0441\u0438\u0433\u043d\u0430\u043b\u044b", url: "#_top", children: [
               {title: "\u0417\u0430\u0434\u0430\u043d\u0438\u0435:", url: "#_1" },
           ]},
         ];
@@ -59,21 +59,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
-    <div class="wm-article-nav pull-right">
-      <a href="../pagination/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../pagination/" class="btn btn-xs btn-link">
-        2.2 Пагинация (2.2.2 Кастомная пагинация)
-      </a>
-    </div>
-    
     <div class="wm-article-nav">
-      <a href="../filter/" class="btn btn-xs btn-default pull-left">
+      <a href="../endpoint/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../filter/" class="btn btn-xs btn-link">
-        2.1.1 Ручные фильтры
+        Previous</a><a href="../endpoint/" class="btn btn-xs btn-link">
+        2.3 Загрузка файлов
       </a>
     </div>
     
@@ -81,19 +71,24 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h2 id="212">2.1.2 Автоматические фильтры</h2>
+    <h2 id="24">2.4. сигналы</h2>
 <h3 id="_1">Задание:</h3>
-<p>Реализовать следующие фильтры с помощью библиотеки django-filters:</p>
+<p>Реализовать 3 сигнала, которые:</p>
 <ul>
-<li>сортировка по дате, поиск, поиск по полям из связной таблицы</li>
-<li>сортировка в диапазоне цен, дат или каких-либо других числовых значений</li>
+<li>Вызывает логику, во время создания экземпляра объекта.</li>
+<li>Сохраняет значения выбранных полей в таблице в специальные поля для хранения предыдущих значений при обновлении объекта.</li>
+<li>При удалении объекта записывает информацию об удалении в лог реализованный любым образом.</li>
 </ul>
-<p>Сортировка рейсов по датам вылета и прилёта: 
-<img alt="Sort1" src="../img/sort1.png" /></p>
-<p>Поиск сотрудника по названию должности и ID из связной таблицы:
-<img alt="Sort2" src="../img/sort2.png" /></p>
-<p>Сортировка самолётов в диапазоне скоростей:
-<img alt="Sort3" src="../img/sort3.png" /></p>
+<p>Обновлённая модель + лог:</p>
+<p><img alt="Model" src="../img/models_4.png" /></p>
+<p>Сигналы:</p>
+<p><img alt="Signal" src="../img/signals.png" /></p>
+<p>Вывод:</p>
+<p><img alt="NewW" src="../img/newworker.png" />
+<img alt="Confirm" src="../img/confirm.png" />
+<img alt="UpdW" src="../img/updateworker.png" />
+<img alt="Result" src="../img/updateresult.png" />
+<img alt="Delete" src="../img/log.png" /></p>
 
   <br>
     
@@ -105,21 +100,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
-    <div class="wm-article-nav pull-right">
-      <a href="../pagination/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../pagination/" class="btn btn-xs btn-link">
-        2.2 Пагинация (2.2.2 Кастомная пагинация)
-      </a>
-    </div>
-    
     <div class="wm-article-nav">
-      <a href="../filter/" class="btn btn-xs btn-default pull-left">
+      <a href="../endpoint/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../filter/" class="btn btn-xs btn-link">
-        2.1.1 Ручные фильтры
+        Previous</a><a href="../endpoint/" class="btn btn-xs btn-link">
+        2.3 Загрузка файлов
       </a>
     </div>
     

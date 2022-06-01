@@ -11,7 +11,7 @@
     
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>2.1.2 Автоматические фильтры - Airport</title>
+    <title>2.3 Загрузка файлов - Airport</title>
     <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
@@ -32,7 +32,7 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "2.1.2 \u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0444\u0438\u043b\u044c\u0442\u0440\u044b", url: "#_top", children: [
+          {title: "2.3. \u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430 \u0444\u0430\u0439\u043b\u043e\u0432", url: "#_top", children: [
               {title: "\u0417\u0430\u0434\u0430\u043d\u0438\u0435:", url: "#_1" },
           ]},
         ];
@@ -60,20 +60,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../pagination/" class="btn btn-xs btn-default pull-right">
+      <a href="../signal/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../pagination/" class="btn btn-xs btn-link">
-        2.2 Пагинация (2.2.2 Кастомная пагинация)
+      <a href="../signal/" class="btn btn-xs btn-link">
+        2.4 Сигналы
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../filter/" class="btn btn-xs btn-default pull-left">
+      <a href="../pagination/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../filter/" class="btn btn-xs btn-link">
-        2.1.1 Ручные фильтры
+        Previous</a><a href="../pagination/" class="btn btn-xs btn-link">
+        2.2 Пагинация (2.2.2 Кастомная пагинация)
       </a>
     </div>
     
@@ -81,19 +81,30 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h2 id="212">2.1.2 Автоматические фильтры</h2>
+    <h2 id="23">2.3. Загрузка файлов</h2>
 <h3 id="_1">Задание:</h3>
-<p>Реализовать следующие фильтры с помощью библиотеки django-filters:</p>
+<p>Реализовать следующие ендпоинты:</p>
 <ul>
-<li>сортировка по дате, поиск, поиск по полям из связной таблицы</li>
-<li>сортировка в диапазоне цен, дат или каких-либо других числовых значений</li>
+<li>Ендпоинт для загрузки файлов, с указанием внешнего ключа на связный объект и сохранением имени и размера файла в базе данных.</li>
+<li>Ендпоинт для сохранения нескольких файлов и валидации на максимальный размер файла и доступные для загрузки расширения файлов.</li>
 </ul>
-<p>Сортировка рейсов по датам вылета и прилёта: 
-<img alt="Sort1" src="../img/sort1.png" /></p>
-<p>Поиск сотрудника по названию должности и ID из связной таблицы:
-<img alt="Sort2" src="../img/sort2.png" /></p>
-<p>Сортировка самолётов в диапазоне скоростей:
-<img alt="Sort3" src="../img/sort3.png" /></p>
+<p>Табличка с файлами:</p>
+<p><img alt="Path" src="../img/image_path.png" />
+<img alt="Model" src="../img/image_model.png" /></p>
+<p>Сериализатор:</p>
+<p><img alt="Serializer" src="../img/image_serializer.png" /></p>
+<p>Валидатор:</p>
+<p><img alt="Validator" src="../img/validator.png" /></p>
+<p>Представления для загрузки одного и нескольких файлов:</p>
+<p><img alt="View" src="../img/image_many_create.png" /></p>
+<p>Вывод:</p>
+<p><img alt="ImageCr" src="../img/img_create.png" />
+<img alt="ImageCrR" src="../img/img_create_result.png" />
+<img alt="ImageManyCr" src="../img/img_create_many.png" />
+<img alt="ImageManyCrR" src="../img/img_many_create_result.png" /></p>
+<p>Возможные ошибки:</p>
+<p><img alt="Err1" src="../img/err1.png" />
+<img alt="Err2" src="../img/err2.png" /></p>
 
   <br>
     
@@ -106,20 +117,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../pagination/" class="btn btn-xs btn-default pull-right">
+      <a href="../signal/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../pagination/" class="btn btn-xs btn-link">
-        2.2 Пагинация (2.2.2 Кастомная пагинация)
+      <a href="../signal/" class="btn btn-xs btn-link">
+        2.4 Сигналы
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../filter/" class="btn btn-xs btn-default pull-left">
+      <a href="../pagination/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../filter/" class="btn btn-xs btn-link">
-        2.1.1 Ручные фильтры
+        Previous</a><a href="../pagination/" class="btn btn-xs btn-link">
+        2.2 Пагинация (2.2.2 Кастомная пагинация)
       </a>
     </div>
     
