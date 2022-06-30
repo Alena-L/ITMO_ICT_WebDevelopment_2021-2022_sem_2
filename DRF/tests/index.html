@@ -11,7 +11,7 @@
     
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>2.3 Загрузка файлов - Airport</title>
+    <title>3. Тесты - Airport</title>
     <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
@@ -32,7 +32,7 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "2.3. \u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430 \u0444\u0430\u0439\u043b\u043e\u0432", url: "#_top", children: [
+          {title: "3.1 \u0422\u0435\u0441\u0442\u044b", url: "#_top", children: [
               {title: "\u0417\u0430\u0434\u0430\u043d\u0438\u0435:", url: "#_1" },
           ]},
         ];
@@ -60,20 +60,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../signal/" class="btn btn-xs btn-default pull-right">
+      <a href="../../Vue/interfaces/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../signal/" class="btn btn-xs btn-link">
-        2.4 Сигналы
+      <a href="../../Vue/interfaces/" class="btn btn-xs btn-link">
+        4. Адаптация интерфейсов vue.js
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../pagination/" class="btn btn-xs btn-default pull-left">
+      <a href="../signal/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../pagination/" class="btn btn-xs btn-link">
-        2.2 Пагинация (2.2.2 Кастомная пагинация)
+        Previous</a><a href="../signal/" class="btn btn-xs btn-link">
+        2.4 Сигналы
       </a>
     </div>
     
@@ -81,30 +81,31 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h2 id="23">2.3. Загрузка файлов</h2>
+    <h2 id="31">3.1 Тесты</h2>
 <h3 id="_1">Задание:</h3>
-<p>Реализовать следующие ендпоинты:</p>
 <ul>
-<li>Ендпоинт для загрузки файлов, с указанием внешнего ключа на связный объект и сохранением имени и размера файла в базе данных.</li>
-<li>Ендпоинт для сохранения нескольких файлов и валидации на максимальный размер файла и доступные для загрузки расширения файлов.</li>
+<li>Написать тесты на модель в Вашем API (3 таблицы)</li>
+<li>Написать тесты на эндпойнты в Вашем API (3 GET запроса, 3 POST запроса, 3 PATCH запроса)</li>
 </ul>
-<p>Табличка с файлами:</p>
-<p><img alt="Path" src="../img/image_path.png" />
-<img alt="Model" src="../img/image_model.png" /></p>
-<p>Сериализатор:</p>
-<p><img alt="Serializer" src="../img/image_serializer.png" /></p>
-<p>Валидатор:</p>
-<p><img alt="Validator" src="../img/validator.png" /></p>
-<p>Представления для загрузки одного и нескольких файлов:</p>
-<p><img alt="View" src="../img/image_many_create.png" /></p>
-<p>Вывод:</p>
-<p><img alt="ImageCr" src="../img/img_create.png" />
-<img alt="ImageCrR" src="../img/img_create_result.png" />
-<img alt="ImageManyCr" src="../img/img_create_many.png" />
-<img alt="ImageManyCrR" src="../img/img_many_create_result.png" /></p>
-<p>Возможные ошибки:</p>
-<p><img alt="Err1" src="../img/err1.png" />
-<img alt="Err2" src="../img/err2.png" /></p>
+<h4 id="_2">Тесты на модель:</h4>
+<p>Проверка атрибута verbose_name
+<img alt="ModelTest" src="../img/model_test_1.png" /></p>
+<p>Проверка максимальной длины 
+<img alt="ModelTest" src="../img/model_test_2.png" /></p>
+<p>Проверка строкового отображения 
+<img alt="ModelTest" src="../img/model_test_3.png" /></p>
+<h4 id="get">Тесты на get запросы:</h4>
+<p><img alt="GetTest" src="../img/get_test_1.png" /></p>
+<p><img alt="GetTest" src="../img/get_test_2.png" /></p>
+<p><img alt="GetTest" src="../img/get_test_3.png" /></p>
+<h4 id="post">Тесты на post запросы:</h4>
+<p><img alt="PostTest" src="../img/post_test_1.png" /></p>
+<p><img alt="PostTest" src="../img/post_test_2.png" /></p>
+<p><img alt="PostTest" src="../img/post_test_3.png" /></p>
+<h4 id="patch">Тесты на patch запросы:</h4>
+<p><img alt="PatchTest" src="../img/patch_test_1.png" /></p>
+<p><img alt="PatchTest" src="../img/patch_test_2.png" /></p>
+<p><img alt="PatchTest" src="../img/patch_test_3.png" /></p>
 
   <br>
     
@@ -117,20 +118,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../signal/" class="btn btn-xs btn-default pull-right">
+      <a href="../../Vue/interfaces/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../signal/" class="btn btn-xs btn-link">
-        2.4 Сигналы
+      <a href="../../Vue/interfaces/" class="btn btn-xs btn-link">
+        4. Адаптация интерфейсов vue.js
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../pagination/" class="btn btn-xs btn-default pull-left">
+      <a href="../signal/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../pagination/" class="btn btn-xs btn-link">
-        2.2 Пагинация (2.2.2 Кастомная пагинация)
+        Previous</a><a href="../signal/" class="btn btn-xs btn-link">
+        2.4 Сигналы
       </a>
     </div>
     

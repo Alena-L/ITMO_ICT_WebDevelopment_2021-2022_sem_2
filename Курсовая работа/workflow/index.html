@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Workflow - Airport</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <h2>Разработка серверной части:</h2>
+
+<p>Использованные технологии: Django, Django REST framework.</p>
+<p>В ходе разработки были реализованы:
+* Модель базы данных средствами DjangoORM
+* Логика работы API средствами Django REST Framework
+* Регистрация / авторизация по токенам / вывод информации о текущем пользователе средствами Djoser</p>
+<h2>Разработка клиентской части:</h2>
+
+<p>Использованные технологии: Vue JS, Vuetify.</p>
+<p>В ходе разработки было настроено взаимодействие с сервером через
+CORS (Cross-origin resource sharing), а также реализованы следующие интерфейсы:
+* Авторизация, регистрация и изменение учётных данных
+* Создание, вывод, изменение и удаление данных в БД</p>
+<h2>Лабораторная работа 1. Контейнеризация и оркестрация.</h2>
+
+<p>В данной работе с помощью ПО Docker весь код сайта (бэкенд, фронтенд), а также
+его БД были перенесены в контейнеры. Каждый из контейнеров отвечает за свою часть приложения,
+доступ содержимого одного контейнера к содержимому другого возможен благодаря 
+сети, соединяющей контейнеры.</p>
+<p><a href="../../docker/Backend/">Докеризация бэкенда</a></p>
+<p><a href="../../docker/Orchestration/">Оркестрация</a></p>
+<h2>Лабораторная работа 2. Возможности Django REST Framework.</h2>
+
+<p>В данной работе была реализована фильтрация объектов (ручная и с помощью django-filter),
+настроена стандартная пагинация на весь проект и кастомная для определенного
+представления, реализованы эндпойнты для загрузки и валидации файлов, и написаны
+несколько сигналов.</p>
+<p><a href="../../DRF/filter/">Ручные фильтры</a></p>
+<p><a href="../../DRF/sort/">Автоматические фильтры</a></p>
+<p><a href="../../DRF/pagination/">Пагинация</a></p>
+<p><a href="../../DRF/endpoint/">Загрузка файлов</a></p>
+<p><a href="../../DRF/signal/">Сигналы</a></p>
+<h2>Лабораторная работа 3. Тесты Django REST Framework.</h2>
+
+<p>В данной работе были реализованы модульные тесты (на модель, GET, POST и PATCH запросы).
+В разработке использовался нативный фреймворк Django для создания тестов, основанный
+на стандартной библиотеке python unittest.</p>
+<p><a href="../../DRF/tests/">Тесты</a></p>
+<h2>Лабораторная работа 4. Адаптация интерфейсов vue.js.</h2>
+
+<p>В данной работе было реализовано взаимодействие с созданными в ЛР2 эндпойнтами для
+сортировки, фильтрации и поиска объектов, а также настроен приём пагинированных
+ответов с сервера.</p>
+<p><a href="../../Vue/interfaces/">Интерфейсы</a></p>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
